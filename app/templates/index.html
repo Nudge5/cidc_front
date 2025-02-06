@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+    <title>RAG Chatbot</title>
+    <link rel="stylesheet" href="/static/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Do+Hyeon&display=swap" rel="stylesheet">
+    <link rel="icon" href="/static/favicon.ico" type="image/x-icon">
+</head>
+<body>
+    <div class="container">
+        <h1>
+            <img src="/static/bot.png" alt="Icon" style="width: 40px; height: 40px; vertical-align: middle; margin-right: 0px;">
+            부산광역시 감염병관리지원단
+        </h1>
+        <div id="chat-container"></div>
+        <div class="query-input-container">
+            <input type="text" id="query-input" placeholder="궁금하신 내용을 물어보세요!">
+            <button onclick="askQuestion()">전송</button>
+            <div class="exit-button-container">
+                <button onclick="endSession()" class="exit-button">사용종료</button>
+                </div>  
+        </div>
+    </div>
+    <footer>
+        <p class="disclaimer">
+            본 서비스는 항상 정확하지 않을 수 있습니다. 중요한 정보는 반드시 한 번 더 확인하세요.
+        </p>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script> 
+    <script src="/static/script.js"></script>
+    <script>
+        // 사용종료 버튼 기능
+        function endSession() {
+            window.location.href = "https://form.naver.com/response/rpBUriQZgtJaRGkyRpUwGQ";
+        }
+    </script>
+</body>
+</html>

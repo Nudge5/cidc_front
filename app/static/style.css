@@ -1,0 +1,145 @@
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    height: 100vh; /* 화면 전체 높이를 차지 */
+}
+
+.container {
+    width: 60%;
+    margin: auto;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    height: 100%; /* 컨테이너가 부모 높이 차지 */
+    box-sizing: border-box;
+}
+
+h1 {
+    text-align: center;
+    color: #5c5a5a;
+    margin-bottom: 20px;
+    font-size: 2em;
+    font-family: 'Do Hyeon', sans-serif;
+}
+
+#chat-container {
+    flex: 1; /* 남은 공간 모두 차지 */
+    border: 2px solid #ffffff;
+    border-radius: 5px;
+    padding: 15px;
+    overflow-y: auto; /* 넘치는 내용은 스크롤 */
+    background: #ffffff;
+    font-size: 1.1em;
+    line-height: 1.8;
+}
+
+.query-input-container {
+    display: flex;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+input[type="text"] {
+    flex-grow: 1;
+    padding: 12px;
+    border: 2px solid #3195ff;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+/* 모든 버튼 공통 스타일 */
+button, .exit-button {
+    height: 50px; /* 버튼 높이 동일하게 설정 */
+    padding: 10px 20px;
+    font-size: 16px;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    text-align: center;
+    
+    /* 버튼 내부 텍스트 중앙 정렬 */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* 전송 버튼 스타일 */
+button {
+    background-color: #3195ff;
+}
+
+button:hover {
+    background-color: #1976d2;
+}
+
+/* 사용 종료 버튼 스타일 */
+.exit-button {
+    background-color: #f44336;
+}
+
+.exit-button:hover {
+    background-color: #d32f2f;
+}
+
+
+
+.message {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+    padding: 10px;
+    background-color: #ececec;
+    border-radius: 8px;
+}
+
+.avatar {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-left: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.text {
+    flex: 1;
+    background-color: #ffffff;
+    padding: 10px;
+    border-radius: 8px;
+}
+
+.message.user {
+    background-color: #ececec;
+}
+
+.message.bot {
+    background-color: #ececec;
+}
+
+.message.error {
+    background-color: #f8d7da;
+    color: #721c24;
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #ffffff;
+    font-size: 0.9em;
+    color: #666;
+    border-top: 1px solid #ddd;
+    box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.disclaimer {
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+}
